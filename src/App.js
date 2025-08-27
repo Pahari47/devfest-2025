@@ -64,7 +64,7 @@ export default function App() {
                 <FaInstagram />
               </a>
               <a 
-                href="https://www.linkedin.com/company/gdg-durgapur/" 
+                href="https://www.linkedin.com/company/gdgdurgapur/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-black text-yellow-400 p-3 rounded-full hover:scale-110 transition"
