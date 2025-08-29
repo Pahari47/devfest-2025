@@ -2,13 +2,13 @@ import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-yellow-100 to-pink-100 flex items-center justify-center font-sans">
+    <div className="min-h-screen overflow-hidden bg-gradient-to-r from-yellow-100 to-pink-100 flex items-center justify-center font-sans">
       
-      {/* Hero Section - Split into 2 columns */}
-      <section className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-6 py-12 gap-10">
+      {/* Hero Section - Grid (1 col → 2 cols on md) */}
+      <section className="grid grid-cols-1 md:grid-cols-2 items-center w-full max-w-6xl px-6 py-12 gap-10">
         
         {/* Left Content */}
-        <div className="text-center md:text-left flex-1">
+        <div className="text-center md:text-left">
           {/* Title */}
           <h1 className="text-5xl font-extrabold mb-4">
             <span className="text-blue-500">{'{'}</span>
@@ -84,38 +84,35 @@ export default function App() {
         </div>
 
         {/* Right Side Image */}
-        <div className="flex-1 flex justify-center">
+        <div className="flex justify-center">
           <img 
-            src="/devfest-team.png"   // <-- put your team photo inside "public" folder with this name
+            src="/devfest-team.png"
             alt="GDG Durgapur Team" 
-            className="rounded-2xl shadow-lg border-4 border-yellow-400 max-w-md"
+            className="rounded-2xl shadow-lg border-4 border-yellow-400 max-w-md w-full h-auto"
           />
         </div>
       </section>
 
-      {/* Decorative Icons (Responsive positioning) */}
+      {/* Decorative Icons (kept, but overflow hidden at root prevents scrollbars) */}
       <img 
         src="/icons/light.png" 
         alt="Light bulb" 
-        className="absolute top-4 left-4 w-8 h-8 md:top-10 md:left-10 md:w-12 md:h-12 opacity-80 hover:opacity-100 transition"
+        className="absolute top-4 left-4 w-8 h-8 md:top-10 md:left-10 md:w-12 md:h-12 opacity-80 hover:opacity-100 transition pointer-events-none"
       />
-
       <img 
         src="/icons/globe.png" 
         alt="Globe" 
-        className="absolute bottom-6 right-6 w-8 h-8 md:bottom-16 md:right-12 md:w-12 md:h-12 opacity-80 hover:opacity-100 transition"
+        className="absolute bottom-6 right-6 w-8 h-8 md:bottom-16 md:right-12 md:w-12 md:h-12 opacity-80 hover:opacity-100 transition pointer-events-none"
       />
-
       <img 
         src="/icons/arrow.png" 
         alt="Arrow" 
-        className="absolute top-1/3 left-4 w-6 h-6 rotate-12 md:top-1/2 md:left-12 md:w-10 md:h-10 opacity-80 hover:opacity-100 transition"
+        className="absolute top-1/3 left-4 w-6 h-6 rotate-12 md:top-1/2 md:left-12 md:w-10 md:h-10 opacity-80 hover:opacity-100 transition pointer-events-none"
       />
-
       <img 
         src="/icons/flash.png" 
         alt="Flash" 
-        className="absolute top-16 right-6 w-8 h-8 md:top-24 md:right-20 md:w-12 md:h-12 opacity-80 hover:opacity-100 transition"
+        className="absolute top-16 right-6 w-8 h-8 md:top-24 md:right-20 md:w-12 md:h-12 opacity-80 hover:opacity-100 transition pointer-events-none"
       />
     </div>
   );
