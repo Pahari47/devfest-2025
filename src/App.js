@@ -36,10 +36,10 @@ export default function App() {
           {/* Date & Location */}
           <div className="flex justify-center md:justify-start gap-6 mt-6 text-lg">
             <span className="flex items-center gap-2">
-              📅 <b>2nd November</b>
+              📅 <b>To Be Announced</b>
             </span>
             <span className="flex items-center gap-2">
-              📍 <b>TBD</b>
+              📍 <b>Srijani Auditorium</b>
             </span>
           </div>
 
@@ -86,18 +86,37 @@ export default function App() {
         {/* Right Side Image */}
         <div className="flex-1 flex justify-center">
           <img 
-            src="/gdg-team.jpg"   // <-- put your team photo inside "public" folder with this name
+            src="/devfest-team.png"   // <-- put your team photo inside "public" folder with this name
             alt="GDG Durgapur Team" 
             className="rounded-2xl shadow-lg border-4 border-yellow-400 max-w-md"
           />
         </div>
       </section>
 
-      {/* Decorative Icons */}
-      <div className="absolute top-10 left-10 text-4xl">💡</div>
-      <div className="absolute bottom-16 right-12 text-4xl">🌐</div>
-      <div className="absolute top-1/2 left-12 text-3xl rotate-12">➔</div>
-      <div className="absolute top-24 right-20 text-3xl">⚡</div>
+      {/* Decorative Icons (Responsive positioning) */}
+      <img 
+        src="/icons/light.png" 
+        alt="Light bulb" 
+        className="absolute top-4 left-4 w-8 h-8 md:top-10 md:left-10 md:w-12 md:h-12 opacity-80 hover:opacity-100 transition"
+      />
+
+      <img 
+        src="/icons/globe.png" 
+        alt="Globe" 
+        className="absolute bottom-6 right-6 w-8 h-8 md:bottom-16 md:right-12 md:w-12 md:h-12 opacity-80 hover:opacity-100 transition"
+      />
+
+      <img 
+        src="/icons/arrow.png" 
+        alt="Arrow" 
+        className="absolute top-1/3 left-4 w-6 h-6 rotate-12 md:top-1/2 md:left-12 md:w-10 md:h-10 opacity-80 hover:opacity-100 transition"
+      />
+
+      <img 
+        src="/icons/flash.png" 
+        alt="Flash" 
+        className="absolute top-16 right-6 w-8 h-8 md:top-24 md:right-20 md:w-12 md:h-12 opacity-80 hover:opacity-100 transition"
+      />
     </div>
   );
 }
